@@ -43,36 +43,13 @@ export function LandingPage() {
             </div>
 
             <div className="animate-fade-up-delay relative">
-              <div className="glass rounded-[28px] p-5 shadow-2xl">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="text-sm text-teal-100">نموذج سؤال من الامتحان</div>
-                  <div className="rounded-full bg-accent px-3 py-1 text-xs font-bold text-ink">
-                    النجاح من 24 / 30
-                  </div>
-                </div>
-                <div className="rounded-2xl bg-white p-5 text-ink">
-                  <div className="text-xs font-bold text-muted">السؤال 12 من 30</div>
-                  <p className="mt-3 text-lg font-bold leading-relaxed">
-                    عند تقاطع غير منظم، لمن تكون الأولوية؟
-                  </p>
-                  <div className="mt-4 space-y-2">
-                    {['القادم من اليمين', 'القادم من اليسار', 'السيارة الأسرع'].map(
-                      (opt, i) => (
-                        <div
-                          key={opt}
-                          className={`rounded-xl border px-4 py-3 text-sm font-semibold ${
-                            i === 0
-                              ? 'border-brand bg-teal-50 text-brand'
-                              : 'border-line bg-surface'
-                          }`}
-                        >
-                          {opt}
-                        </div>
-                      ),
-                    )}
-                  </div>
-                </div>
-              </div>
+              <figure className="overflow-hidden rounded-[28px] border border-white/15 shadow-2xl ring-1 ring-white/10">
+                <img
+                  src="/landing-hero.jpg"
+                  alt="نجاح في الامتحان النظري لقانون المرور"
+                  className="aspect-[4/3] h-full w-full object-cover"
+                />
+              </figure>
             </div>
           </div>
         </section>
