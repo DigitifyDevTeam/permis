@@ -46,7 +46,7 @@ export function LandingPage() {
               <figure className="overflow-hidden rounded-[28px] border border-white/15 shadow-2xl ring-1 ring-white/10">
                 <img
                   src="/landing-hero.jpg"
-                  alt="نجاح في الامتحان النظري لقانون المرور"
+                  alt="رخصة سياقة تونسية مع إشارات قانون المرور"
                   className="aspect-[4/3] h-full w-full object-cover"
                 />
               </figure>
