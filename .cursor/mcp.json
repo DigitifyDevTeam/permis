@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ScraperAPI": {
+      "url": "https://mcp.scraperapi.com/mcp",
+      "headers": {
+        "Authorization": "Bearer 987a15226dad1fc121cf153840ec76a8"
+      }
+    }
+  }
+}

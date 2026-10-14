@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Cairo', ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0b1f1c;
+  --color-ink-soft: #1f3d38;
+  --color-muted: #5b726c;
+  --color-surface: #f4f7f6;
+  --color-card: #ffffff;
+  --color-brand: #0f766e;
+  --color-brand-dark: #0b5c56;
+  --color-brand-light: #14b8a6;
+  --color-accent: #f59e0b;
+  --color-accent-soft: #fef3c7;
+  --color-danger: #dc2626;
+  --color-success: #059669;
+  --color-line: #d7e3df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.15s both;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.hero-grid {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(245, 158, 11, 0.16), transparent 35%),
+    linear-gradient(160deg, #062e2a 0%, #0f766e 48%, #134e4a 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background: white;
+  }
+}
